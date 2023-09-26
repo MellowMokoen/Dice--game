@@ -72,17 +72,21 @@ holdBtn.addEventListener('click', () => {
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
         // Check if the player won
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= 12) {
             playing = false;
             diceEl.classList.add('hidden');
             document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
             document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+            let diceImage = document.querySelector(".dice");
+            diceImage.innerHTML = "The winner is";
         } else {
-            // Switch to the next player
+            // Move to the next player
             switchPlayer();
         }
+
+        
     }
 });
 
-// Start game functionality
+// Event listener to start the game
 startBtn.addEventListener('click', init);
