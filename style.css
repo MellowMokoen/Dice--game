@@ -56,16 +56,16 @@ body {
 }
 
 .player--active {
-	background-color: #234e70;
+	background-color: red;
 }
 
 .player--active .current {
-	opacity: 1;
+	opacity: 0.3;
 }
 
 .current {
 	margin-top: 10rem;
-	background-color: #fff;
+	background-color: #fceded;
 	border-radius: 9px;
 	width: 65%;
 	padding: 2rem;
